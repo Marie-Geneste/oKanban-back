@@ -8,8 +8,9 @@ const List = require("./List");
 List.hasMany(Card, {
     as: "cards", // Depuis une List, je pourrai demander ses "cards"
     foreignKey: "list_id"
-    });
-    Card.belongsTo(List, {
+});
+
+Card.belongsTo(List, {
     as: "list", // Depuis une Card, je veux la "list"
     foreignKey: "list_id"
 });
